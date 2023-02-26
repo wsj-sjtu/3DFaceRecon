@@ -40,7 +40,7 @@
     
     <div id="authors">
       
-        <table class="author-row" align=center width="50%">
+        <table class="author-row" align=center width="75%">
             <tr>
             <td colspan="1">
                 Sijing Wu
@@ -71,54 +71,31 @@
         <p>Reconstructing the 3D face from a single image is an ill-posed problem, so that 3D Morphable Models (3DMMs) are widely used to reduce ambiguity. 
            However, 3D faces reconstructed by directly estimating 3DMM parameters are far from photo-realistic due to the limited representation power of 3DMMs. 
            In this paper, we propose a novel framework to break through the limitations of 3DMMs without additional 3D data. 
+           <br/>
            The main idea is that well-aligned coarse geometry along with high-fidelity texture is the most economical way to achieve photo-realistic 3D face reconstruction, and the geometry and texture can be optimized in a synergetic manner (i.e., accurate geometry leads to better texture, while high-fidelity texture promotes the refinement of the geometry). 
            Specifically, the texture is extracted from the input image and the invisible part is completed by an inpainting network trained via a novel unsupervised manner. Different from existing UV completion methods, we treat it as an unsupervised domain adaptation problem for image inpainting, since we have ground truth data (i.e., complete UV texture) in the 3DMM domain (i.e., source domain) but not in the real texture domain (i.e., target domain). To this end, we train an unpaired image-to-image translation network to translate complete 3DMM texture to the real domain which is then used to train the UV texture inpainting network. 
            As for the geometry, we propose a graph convolutional network (GCN) based mesh deformation module to perform free-form deformation to the coarse geometry recovered by 3DMM to break through the limited representation power of 3DMM. The deformed geometry is then used to extract UV texture from the input image which is then completed by the pre-trained inpainting network. The refined geometry alone with complete UV texture is then rerendered to the image for self-supervised training of the deformation module. 
+           <br/>
            Extensive experiments demonstrate the superiority of our method over previous work. Furthermore, our method can be used for monocular 3D caricature face reconstruction based on normal face 3DMM (without the need for 3D caricature face data).
         </p>
     </section>
 
     
-    <section id="Demo Video">
-        <h2>Demo Video</h2>
+    <section id="Results">
+        <h2>Results</h2>
         <hr/>
+        <h3>Baseline</h3>
+        <h3>Ours</h3>
         <figure style="width: 100%;">
-            <video class="centered" width="100%" controls muted loop autoplay>
-                <source src="assets/demo_new.mp4" type="video/mp4">
-            </video>
+            <a href="assets/demo_deocc.gif">
+                <img width="100%" src="assets/demo_deocc.gif">
+            </a>
             <p class="caption">The demo video shows the latent code sampling and head avatar generation results, followed by the animation results controlled by FLAME parameters.
             </p>
         </figure>
         <hr/>
     </section>
 
-    <section id="Applications">
-        <h2>Application</h2>
-        <hr/>
-        <h3>Face Reenactment</h3>
-        <figure style="width: 100%;">
-            <video class="centered" width="100%" controls muted loop autoplay>
-                <source src="assets/reenactment.mp4" type="video/mp4">
-            </video>
-            <p class="caption"> We estimate the FLAME parameters of the sourse video, and use the estimated pose and expression parameters to animate the generated head avatars. 
-                                The generated avatars can fully reproduce FLAME's poses and expressions.
-            </p>
-        </figure>
-        <br/>
-        <hr/>
-      
-        <h3>Raw Scan Fitting</h3>
-        <figure style="width: 80%;">
-            <a href="assets/fitting.png">
-                <img width="100%" src="assets/fitting.png">
-            </a>
-        </figure>
-        <figure style="width: 100%;">
-            <p class="caption">
-                Our model can also be fitted to raw scans to produce personal animatable head avatars.
-            </p>
-        </figure>
-    </section>
 
     <section id="Other Results">
         <h2>Other Results</h2>
