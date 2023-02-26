@@ -1,0 +1,267 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<script src="http://www.google.com/jsapi" type="text/javascript"></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=default'></script>
+
+<link rel="stylesheet" type="text/css" href="style.css" />
+  
+
+<!-- End : Google Analytics Code -->
+<script type="text/javascript" src="../js/hidebib.js"></script>
+<!-- <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,600,400italic,600italic,300,300italic' rel='stylesheet' type='text/css'> -->
+<!-- <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'> -->
+<link href='https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro' rel='stylesheet' type='text/css'>
+  
+<head>
+    <title>GANHead: Towards Generative Animatable Neural Head Avatars</title>
+    <meta property="og:description" content="GANHead: Towards Generative Animatable Neural Head Avatars"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6HHDEXF452"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-6HHDEXF452');
+</script>
+
+</head>
+
+
+ <body>
+<div class="container">
+    <div class="paper-title">
+      <h1>GANHead: Towards Generative Animatable Neural Head Avatars</h1>
+    </div>
+
+    
+    <div id="authors">
+        <div class="author-row">
+            <div class="col-8 text-center">Sijing Wu<sup>1</sup></div>
+            <div class="col-8 text-center"><a href="https://daodaofr.github.io/">Yichao Yan</a><sup>1</sup></div>
+            <div class="col-8 text-center">Yunhao Li<sup>1</sup></div>
+            <div class="col-8 text-center">Yuhao Cheng<sup>1</sup></div>
+            <div class="col-8 text-center">Wenhan Zhu<sup>1</sup></div>
+            <div class="col-8 text-center">Ke Gao<sup>2</sup></div>
+            <div class="col-8 text-center">XiaoBo Li<sup>2</sup></div>
+            <div class="col-8 text-center"><a href="https://scholar.google.com/citations?user=E6zbSYgAAAAJ&hl=en&oi=ao">Guangtao Zhai</a><sup>1</sup></div>
+        </div>
+
+<!--         <div class="affil-row">
+            <div class="col-2 text-center"><sup>1</sup>Shanghai Jiao Tong University</a></div>
+            <div class="col-2 text-center"><sup>2</sup>Alibaba</a></div>
+        </div> -->
+        <table align=center width="50%">
+            <tr>
+            <td colspan="1">
+                <sup>1</sup>Shanghai Jiao Tong University
+            </td>
+            <td colspan="1">
+                <sup>2</sup>Alibaba
+            </td>
+            </tr>
+        </table>
+
+<!--         <div style="clear: both">
+            <div class="paper-btn-parent">
+            <a class="supp-btn" href="https://arxiv.org/abs/2112.00958">
+                <span class="material-icons"> description </span>
+                 Paper
+            </a>
+            <a class="supp-btn" href="assets/bib.txt">
+                <span class="material-icons"> description </span>
+                  BibTeX
+            </a>
+        </div></div> -->
+    </div>
+
+<!--     <section id="teaser">
+        <a href="assets/teaser.png">
+            <img width="100%" src="assets/teaser.png">
+        </a>
+        <p class="caption">Our approach, <strong>HIPNet</strong>, models 3D shape of multiple articulated
+            subjects in a single trained neural implicit representation, while showing
+            excellent reconstruction, generalization to novel poses, and only requiring weak supervision.
+        </p>
+    </section> -->
+
+    <section id="abstract"/>
+        <h2>Abstract</h2>
+        <hr/>
+
+        <p>To bring digital avatars into people’s lives, it is highly demanded to efficiently generate complete, realistic, and
+            animatable head avatars. This task is challenging, and it is difficult for existing methods to satisfy all the requirements
+            at once. To achieve these goals, we propose GANHead (<strong>G</strong>enerative <strong>A</strong>nimatable <strong>N</strong>eural <strong>Head</strong> Avatar), 
+            a novel generative head model that takes advantages of both the finegrained control over the explicit expression parameters and
+            the realistic rendering results of implicit representations. Specifically, GANHead represents coarse geometry, finegained
+            details and texture via three networks in canonical space to obtain the ability to generate complete and realistic
+            head avatars. To achieve flexible animation, we define the deformation filed by standard linear blend skinning (LBS),
+            with the learned continuous pose and expression bases and LBS weights. This allows the avatars to be directly animated 
+            by FLAME parameters and generalize well to unseen poses and expressions. Compared to state-of-the-art (SOTA) methods, 
+            GANHead achieves superior performance on head avatar generation and raw scan fitting.
+            </p>
+    </section>
+
+<!--     <section id="method">
+        <h2>Method</h2>
+        <hr/>
+        <figure style="width: 100%;">
+            <a href="assets/method.png">
+                <img width="100%" src="assets/method.png">
+            </a>
+            <p class="caption" style="margin-bottom: 1px;">
+                <strong>HIPNet</strong> is composed of separate sub-network MLPs arranged hierarchically according to
+                an input skeleton. The final aggregation network is fed the results of these sub-networks an
+                 outputs the final SDF value. The subject latent codes \(\boldsymbol\beta_i\) are optimized
+                 during training, alongside the parameters of the pose encoding network \(\boldsymbol\Phi\).
+                 Refer to the text for additional details.
+            </p>
+        </figure>
+        
+
+        <section id="results"/>
+        <h2>Results</h2>
+        <hr/>
+
+        <figure style="width: 100%;">    
+            <video class="centered" width="100%" controls muted loop autoplay>
+                <source src="assets/interpolation.mkv" type="video/mp4">
+            </video>
+            <a href="assets/gallery.png">
+                <img width="100%" src="assets/gallery.png">
+            </a>
+            <p class="caption">
+            Unlike various prior works, our model does not require a traditional morphable model during training.
+            Our shape space is entirely learnt from data, and our pose space is hierarchically-defined and driven by
+            the input 3D pose, which enables us to generalize to unseen poses.
+            </p>
+        </figure>
+
+        <br/>
+        <hr/>
+        <figure style="width: 100%;">  
+            <video class="centered" width="100%" controls muted loop autoplay>
+                <source src="assets/multi.mp4" type="video/mp4">
+            </video>
+        </figure>
+
+
+    </section> -->
+    
+    
+    <section id="Demo Video">
+        <h2>Demo Video</h2>
+        <hr/>
+        <figure style="width: 100%;">
+            <video class="centered" width="100%" controls muted loop autoplay>
+                <source src="assets/demo_new.mp4" type="video/mp4">
+            </video>
+            <p class="caption">The demo video shows the latent code sampling and head avatar generation results, followed by the animation results controlled by FLAME parameters.
+            </p>
+        </figure>
+        <hr/>
+    </section>
+
+    <section id="Applications">
+        <h2>Application</h2>
+        <hr/>
+        <h3>Face Reenactment</h3>
+        <figure style="width: 100%;">
+            <video class="centered" width="100%" controls muted loop autoplay>
+                <source src="assets/reenactment.mp4" type="video/mp4">
+            </video>
+            <p class="caption"> We estimate the FLAME parameters of the sourse video, and use the estimated pose and expression parameters to animate the generated head avatars. 
+                                The generated avatars can fully reproduce FLAME's poses and expressions.
+            </p>
+        </figure>
+        <br/>
+        <hr/>
+      
+        <h3>Raw Scan Fitting</h3>
+        <figure style="width: 80%;">
+            <a href="assets/fitting.png">
+                <img width="100%" src="assets/fitting.png">
+            </a>
+        </figure>
+        <figure style="width: 100%;">
+            <p class="caption">
+                Our model can also be fitted to raw scans to produce personal animatable head avatars.
+            </p>
+        </figure>
+    </section>
+
+    <section id="Other Results">
+        <h2>Other Results</h2>
+        <hr/>
+        <table align=center width="100%">
+            <tr>
+            <td colspan="4">
+                <h3>Sample Latent Codes</h3>
+            </td>
+            <td colspan="5">
+                <h3>Raw Scan Fitting</h3>
+            </td>
+            </tr>
+          
+            <tr>
+            <td colspan="2">
+                <center>
+                <video width=150px controls muted loop autoplay>
+                    <source src="assets/shape_code.mp4" type="video/mp4">
+                </video>
+            </center>
+            </td>
+            <td colspan="2">
+                <center>
+                <video width=150px controls muted loop autoplay>
+                    <source src="assets/detail_code.mp4" type="video/mp4">
+                </video>
+                </center>
+            </td>
+            <td colspan="5">
+                <center>
+                <a href="assets/multiface_fitting.png">
+                    <img width=640px src="assets/multiface_fitting.png">
+                </a>
+                </center>
+            </td>
+            </tr>
+        </table>
+        <p class="caption"> We also train our model on a subset of Multiface datase. Since Multiface datase has less detail and noise in the hair region, 
+                            our model can learn more details of th facial region and achieve better fitting results.
+        </p>
+        <hr/>
+    </section>
+
+<!--     <section id="bibtex">
+        <h2>Citation</h2>
+        <hr/>
+        <pre><code>
+        @misc{biswas2021hipnet,
+            title = {Hierarchical Neural Implicit Pose Network for Animation and Motion Retargeting}, 
+            author = {Sourav Biswas and Kangxue Yin and Maria Shugrina and Sanja Fidler and Sameh Khamis},
+            eprint = {2112.00958},
+            archivePrefix={arXiv},
+            primaryClass={cs.CV},
+            year = {2021}
+        }
+</code></pre>
+    </section> -->
+
+<!--     <section id="paper">
+        <h2>Paper</h2>
+        <hr/>
+        <figure style="width: 100%;">
+            <a href="https://arxiv.org/abs/2112.00958">
+                <img width="100%" src="assets/preview.png">
+            </a>
+        </figure>
+        <hr/>
+    </section> -->
+
+</div>
+</body>
+</html>
