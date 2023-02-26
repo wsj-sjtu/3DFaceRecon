@@ -68,15 +68,15 @@
         <h2>Abstract</h2>
         <hr/>
 
-        <p>&+n+b+s+p+;Reconstructing the 3D face from a single image is an ill-posed problem, so that 3D Morphable Models (3DMMs) are widely used to reduce ambiguity. 
+        <p>&nbsp;Reconstructing the 3D face from a single image is an ill-posed problem, so that 3D Morphable Models (3DMMs) are widely used to reduce ambiguity. 
            However, 3D faces reconstructed by directly estimating 3DMM parameters are far from photo-realistic due to the limited representation power of 3DMMs. 
            In this paper, we propose a novel framework to break through the limitations of 3DMMs without additional 3D data. 
            <br/>
-           &+n+b+s+p+;The main idea is that well-aligned coarse geometry along with high-fidelity texture is the most economical way to achieve photo-realistic 3D face reconstruction, and the geometry and texture can be optimized in a synergetic manner (i.e., accurate geometry leads to better texture, while high-fidelity texture promotes the refinement of the geometry). 
+           &nbsp;The main idea is that well-aligned coarse geometry along with high-fidelity texture is the most economical way to achieve photo-realistic 3D face reconstruction, and the geometry and texture can be optimized in a synergetic manner (i.e., accurate geometry leads to better texture, while high-fidelity texture promotes the refinement of the geometry). 
            Specifically, the texture is extracted from the input image and the invisible part is completed by an inpainting network trained via a novel unsupervised manner. Different from existing UV completion methods, we treat it as an unsupervised domain adaptation problem for image inpainting, since we have ground truth data (i.e., complete UV texture) in the 3DMM domain (i.e., source domain) but not in the real texture domain (i.e., target domain). To this end, we train an unpaired image-to-image translation network to translate complete 3DMM texture to the real domain which is then used to train the UV texture inpainting network. 
            As for the geometry, we propose a graph convolutional network (GCN) based mesh deformation module to perform free-form deformation to the coarse geometry recovered by 3DMM to break through the limited representation power of 3DMM. The deformed geometry is then used to extract UV texture from the input image which is then completed by the pre-trained inpainting network. The refined geometry alone with complete UV texture is then rerendered to the image for self-supervised training of the deformation module. 
            <br/>
-           &+n+b+s+p+;Extensive experiments demonstrate the superiority of our method over previous work. Furthermore, our method can be used for monocular 3D caricature face reconstruction based on normal face 3DMM (without the need for 3D caricature face data).
+           &nbsp;Extensive experiments demonstrate the superiority of our method over previous work. Furthermore, our method can be used for monocular 3D caricature face reconstruction based on normal face 3DMM (without the need for 3D caricature face data).
         </p>
     </section>
 
