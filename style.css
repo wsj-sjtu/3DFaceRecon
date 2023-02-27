@@ -38,11 +38,17 @@ h3 {
     font-size: 1.5em;
     font-weight: 400;
 }
-h4 {
+h41 {
     text-align: left;
     font-size: 1.2em;
     font-weight: 350;
-    margin: 160px 0px 0px 0px;
+    margin: 5px 0px 160px 0px;
+}
+h42 {
+    text-align: left;
+    font-size: 1.2em;
+    font-weight: 350;
+    margin: 5px 0px 530px 0px;
 }
 .paper-title {
     padding: 16px 0px 16px 0px;
